@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+
+<body>
+  <header>
+  
+
+  <h1>Timeless Blooms 🌸</h1>
+
+
+    <nav class="nav">
+      <a href="home.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="Services.html">Services</a>
+      <a href="ContactUs.html">Contact Us</a>
+      <a href="AboutUs.html">About Us</a>
+        <a href="index.html" class="logout">Logout</a>
+      
+    </nav>
+  </header>
+
+  <div class="filter-search-container">
+    <select id="priceFilter" onchange="filterByPrice()">
+      <option value="all">All Prices</option>
+      <option value="cheap">Below ₱1000</option>
+      <option value="expensive">₱1000 and above</option>
+    </select>
+  
+    <input type="text" id="searchBar" onkeyup="searchProduct()" placeholder="Search flowers...">
+</div>
+
+  <h2 class="section-label">💐 Bouquets:</h2>
+  <section class="products">
+    <div class="card">
+      <img src="images/rose1.jpg" alt="Rose bouquet with red roses and green leaves" />
+      <h3>Rose Bouquet</h3>
+      <div class="rating">⭐️⭐️⭐️⭐️</div> <!-- 4 stars -->
+      <p>₱1,499.00</p>  
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="images/daisy.jpg" alt="Daisy bouquet with yellow and white flowers" />
+      <h3>Daisy Bouquet</h3>
+      <div class="rating">⭐️⭐️⭐️</div> <!-- 3 stars -->
+      <p>₱899.75</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="images/carnation.jpg" alt="Carnation bouquet with pink and white carnations" />
+      <h3>Carnation Bouquet</h3>
+      <div class="rating">⭐️⭐️⭐️⭐️⭐️</div> <!-- 5 stars -->
+      <p>₱1,050.00</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="images/orchids.jpg" alt="Orchids bouquet with purple orchids" />
+      <h3>Orchids Bouquet</h3>
+      <div class="rating">⭐️⭐️⭐️⭐️</div> <!-- 4 stars -->
+      <p>₱1,799.99</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="images/sunflower.jpg" alt="Sunflower bouquet with vibrant yellow sunflowers" />
+      <h3>Sunflower Bouquet</h3>
+      <div class="rating">⭐️⭐️⭐️</div> <!-- 3 stars -->
+      <p>₱999.50</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="images/lily.jpg" alt="Lily bouquet with white and pink lilies" />
+      <h3>Lily Bouquet</h3>
+      <div class="rating">⭐️⭐️⭐️⭐️⭐️</div> <!-- 5 stars -->
+      <p>₱1,299.00</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="images/peonies.jpg" alt="Peonies bouquet with soft pink peonies" />
+      <h3>Peonies Bouquet</h3>
+      <div class="rating">⭐️⭐️⭐️⭐️</div> <!-- 4 stars -->
+      <p>₱1,650.25</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="images/Gerbera Daisies.jpg" alt="Gerbera Daisies bouquet with colorful flowers" />
+      <h3>Gerbera Daisies Bouquet</h3>
+      <div class="rating">⭐️⭐️⭐️</div> <!-- 3 stars -->
+      <p>₱1,100.00</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="images/hydrangeas.jpg" alt="Hydrangeas bouquet with blue hydrangeas" />
+      <h3>Hydrangeas Bouquet</h3>
+      <div class="rating">⭐️⭐️⭐️⭐️⭐️</div> <!-- 5 stars -->
+      <p>₱1,499.99</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="images/mixed.jpg" alt="Mixed bouquet with a variety of flowers" />
+      <h3>Mixed Bouquet</h3>
+      <div class="rating">⭐️⭐️⭐️⭐️</div> <!-- 4 stars -->
+      <p>₱1,899.00</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </section>
+
+
+  <h2 class="section-label">🎁 Gift Bundles:</h2>
+<section class="gift-bundles">
+  <div class="card">
+    <img src="images/panda.jpg" alt="panda" />
+    <h3>Teddy Bouquet Gift Bundle</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <p>₱1,999.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/teddy.jpg" alt="teddy" />
+    <h3>Teddy Bouquet Gift Bundle</h3>
+    <div class="rating">⭐️⭐️⭐️</div>
+    <p>₱2,099.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/rc.jpg" alt="rc" />
+    <h3>Roses with Chocolates</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <p>₱1,750.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/cfw.jpg" alt="cfw" />
+    <h3>Flower with Chocolate and Wine</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+    <p>₱2,899.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+</section>
+
+<h2 class="section-label">🧶 Cute Flower Crochet:</h2>
+<section class="gift-bundles">
+  <div class="card">
+    <img src="images/q1.png" alt="q1" />
+    <h3>Cute teddy and Mix Flower Crochet</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <p>₱1,999.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/q2.jpg" alt="q2" />
+    <h3>Mini Key Chain Flower Crochet</h3>
+    <div class="rating">⭐️⭐️⭐️</div>
+    <p>₱250.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/q3.jpg" alt="q3" />
+    <h3>Winnie the Pooh Flower Crochet</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+    <p>₱1,750.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/q4.jpg" alt="q4" />
+    <h3>Crochet Flower Inspired from Rapunzle</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <p>₱2,899.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/q5.jpg" alt="q5" />
+    <h3>Crochet Flower Inspired from Tinker Bell</h3>
+    <div class="rating">⭐️⭐️⭐️</div>
+    <p>₱1,899.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/q6.jpg" alt="q6" />
+    <h3>Cutie Crochet Flower 1 </h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <p>₱1,650.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/q7.jpg" alt="q7" />
+    <h3>Cutie Crochet Flower 2</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <p>₱1,850.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/q8.jpg" alt="q8" />
+    <h3>Special Mix Flower</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+    <p>₱3,000.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+</section>
+
+<h2 class="section-label">🕊️ Funeral Flowers </h2>
+<section class="gift-bundles">
+  <div class="card">
+    <img src="images/f1.jpg" alt="f1" />
+    <h3>Cross Shaped Funeral Flower Design #1</h3>
+    <div class="rating">⭐️⭐️⭐️</div>
+    <p>₱1,799.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/f2.jpg" alt="f2" />
+    <h3>Cross Shaped Funeral Flower Design #2</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <p>₱1,599.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/f3.jpg" alt="f3" />
+    <h3>Cross Shaped Funeral Flower Design #3</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+    <p>₱2,000.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/f4.jpg" alt="f4" />
+    <h3>Cross Shaped Funeral Flower Design #4</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <p>₱2,550.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/h1.jpg" alt="h1" />
+    <h3>Heart Shaped Funeral Flower Design #1</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <p>₱1,450.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/h2.jpg" alt="h2" />
+    <h3>Heart Shaped Funeral Flower Design #2</h3>
+    <div class="rating">⭐️⭐️⭐️</div>
+    <p>₱1,499.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/c1.jpg" alt="c1" />
+    <h3>Circle Shaped Funeral Flower Design #1</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <p>₱1,699.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/c2.jpg" alt="c2" />
+    <h3>Circle Shaped Funeral Flower Design #2</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <p>₱1,699.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/c3.jpg" alt="c3" />
+    <h3>Guitar Funeral Flower </h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <p>₱3,699.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/c4.png" alt="c4" />
+    <h3>Gates of Heaven funeral flowers</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+    <p>₱1,599.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/c5.jpg" alt="c5" />
+    <h3>Lettering Funeral Flower</h3>
+    <div class="rating">⭐️⭐️⭐️</div>
+    <p>₱1,499.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div> 
+
+  <div class="card">
+    <img src="images/c6.jpg" alt="c6" />
+    <h3>Angel Wings Funeral Flower</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+    <p>₱1,999.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div> 
+</section>
+
+
+<h2 class="section-label">💐🌼💸 Budget Friendly Flowers</h2>
+<section class="gift-bundles">
+  <!-- existing cards -->
+  <div class="card">
+    <img src="images/m1.jpg" alt="m1" />
+    <h3>Mini Flower #1</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+    <p>₱550.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+  <img src="images/m2.jpg" alt="m2" />
+  <h3>Mini Flower #2</h3>
+  <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+  <p>₱350.00</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="images/m3.jpg" alt="m3" />
+  <h3>Mini Flower #3</h3>
+  <div class="rating">⭐️⭐️⭐️⭐️</div>
+  <p>₱450.00</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="images/m4.jpg" alt="m4" />
+  <h3>Mini Flower #4</h3>
+  <div class="rating">⭐️⭐️⭐️</div>
+  <p>₱280.00</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="images/m5.jpg" alt="m5" />
+  <h3>Mini Flower #5</h3>
+  <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+  <p>₱580.00</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="images/m6.jpg" alt="m6" />
+  <h3>Mini Flower #6</h3>
+  <div class="rating">⭐️⭐️⭐️⭐️</div>
+  <p>₱300.00</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="images/m7.jpg" alt="m7" />
+  <h3>Mini Flower #7</h3>
+  <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+  <p>₱600.00</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="images/m8.jpg" alt="m8" />
+  <h3>Mini Flower #8</h3>
+  <div class="rating">⭐️⭐️⭐️</div>
+  <p>₱420.00</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+
+
+</section>
+  
+
+
+<h2 class="section-label">Seeds and Educational Book for Sale:</h2>
+<section class="gift-bundles">
+  <!-- existing cards -->
+  <div class="card">
+  <img src="images/seed1.jpg" alt="seed1" />
+  <h3>Sunflower Seeds</h3>
+  <div class="rating">⭐️⭐️⭐️⭐️</div>
+  <p>₱150.00</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="images/seed2.jpg" alt="seed2" />
+  <h3>Wild Flower Seeds</h3>
+  <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+  <p>₱169.00</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="images/seed3.jpg" alt="seed3" />
+  <h3>MariGold Flower Seeds</h3>
+  <div class="rating">⭐️⭐️⭐️</div>
+  <p>₱150.00</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="images/seed4.jpg" alt="seed4" />
+  <h3>Cosmos Flower Seeds</h3>
+  <div class="rating">⭐️⭐️⭐️⭐️</div>
+  <p>₱199.00</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="images/ed1.jpg" alt="ed1" />
+  <h3>The Botanical Bible</h3>
+  <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+  <p>₱450.00</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="images/ed2.jpg" alt="ed2" />
+  <h3>Floriographie</h3>
+  <div class="rating">⭐️⭐️⭐️⭐️</div>
+  <p>₱520.00</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="images/ed3.jpg" alt="ed3" />
+  <h3>The Home Herbal</h3>
+  <div class="rating">⭐️⭐️⭐️⭐️</div>
+  <p>₱470.00</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="images/ed4.jpg" alt="ed4" />
+  <h3>The Language of Flower</h3>
+  <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+  <p>₱490.00</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+</section>
+
+<h2 class="section-label">Add-Ons:</h2>
+<section class="gift-bundles">
+
+  <div class="card">
+    <img src="images/gc1.jpg" alt="gc1" />
+    <h3>Gift cards</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+    <p>₱100.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+
+  <div class="card">
+    <img src="images/ch1.png" alt="ch1" />
+    <h3>Chocolates</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <p>₱1,600.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/can1.jpg" alt="can1" />
+    <h3>Number Candles</h3>
+    <div class="rating">⭐️⭐️⭐️</div>
+    <p>₱150.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/cake1.jpg" alt="cake1" />
+    <h3>Cakes</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+    <p>₱400.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div> 
+
+  <div class="card">
+    <img src="images/td1.jpg" alt="td1" />
+    <h3>Teddy Bears</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <p>₱400.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/mg1.jpg" alt="mg1" />
+    <h3>Money</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/cook1.jpg" alt="cook1" />
+    <h3>Cookies</h3>
+    <div class="rating">⭐️⭐️⭐️⭐️</div>
+    <p>₱300.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/wines.jpg" alt="wines" />
+    <h3>Wines</h3>
+    <div class="rating">⭐️⭐️⭐️</div>
+    <p>₱1,230.00</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+</section>
+<script src="script.js"></script>
+</body>
+  <!-- Floating Cart Icon -->
+  <div id="floating-cart" class="floating-cart">
+    <a href="cart.html" aria-label="View your shopping cart">
+      <img src="images/flower-shop.png" alt="Cart" />
+      <span id="cart-count" class="cart-count">0</span>
+    </a>
+  </div>
+
+  <div id="lightbox">
+    <img src="" alt="Lightbox Image">
+    <span class="close-btn">&times;</span>
+  </div>
+
+
+
+
+</html>

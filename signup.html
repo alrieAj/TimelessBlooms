@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up for Timeless Blossoms</title>
+  <link rel="stylesheet" href="css/logd.css">
+  <style>
+    /* Basic style to ensure elements look good on the video background */
+    .Login-container {
+      /* You might need to adjust the max-width or other properties 
+         if the form looks too long compared to the login form */
+      max-width: 450px; 
+    }
+    .back-to-login {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      color: white; /* Match the style of the link on the login page */
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+    .back-to-login:hover {
+      text-decoration: underline;
+    }
+    /* Add any other specific styles for the Sign Up form here */
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="bg-video" playsinline>
+    <source src="videos/lo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="Login-container">
+    <h2>CREATE YOUR TIMELESS BLOSSOMS ACCOUNT</h2>
+
+    <form id="signupForm">
+      
+      <label for="username">Full Name:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+      <div class="checkbox">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the <a href="#" style="color: #ADD8E6;">Terms & Conditions</a></label>
+      </div>
+
+      <button type="submit" class="signin-button">Sign Up</button>
+
+      <p id="message" class="login-message"></p>
+
+      <a href="index.html" class="back-to-login">Already have an account? **Sign In**</a>
+
+    </form>
+  </div>
+
+
+ <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const confirmPassword = document.getElementById("confirmPassword").value.trim();
+      const message = document.getElementById("message");
+      const termsChecked = document.getElementById("terms").checked;
+
+      if (!termsChecked) {
+        message.style.color = "red";
+        message.textContent = "Error: You must accept the Terms & Conditions.";
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        message.style.color = "red";
+        message.textContent = "Error: Passwords do not match!";
+        return;
+      }
+
+      // --- START ACCOUNT STORAGE LOGIC ---
+
+      // 1. Retrieve existing users from localStorage, or initialize an empty array
+      let users = JSON.parse(localStorage.getItem('users')) || [];
+
+      // 2. Check if the email is already registered
+      if (users.some(user => user.email === email)) {
+        message.style.color = "red";
+        message.textContent = "Error: This email is already registered.";
+        return;
+      }
+      
+      // 3. Add the new user to the list
+      const newUser = { 
+        email: email, 
+        password: password, // IMPORTANT: In a real app, hash this password!
+        name: username 
+      };
+      users.push(newUser);
+
+      // 4. Save the updated list back to localStorage
+      localStorage.setItem('users', JSON.stringify(users));
+
+      // --- END ACCOUNT STORAGE LOGIC ---
+      
+      message.style.color = "green";
+      message.textContent = "Account created successfully! Redirecting to login...";
+        
+      setTimeout(() => {
+        window.location.href = "index.html"; // Redirects to your login page
+      }, 2000); 
+    });
+</script>
+
+</body>
+</html>

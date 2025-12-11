@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Checkout | FlowerShop</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- External CSS -->
+<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+<header>
+
+  <h1>Timeless Blooms 🌸</h1>
+
+    <nav class="nav">
+    <a href="home.html">Home</a>
+    <a href="product.html">Product</a>
+    <a href="Services.html">Services</a>
+    <a href="ContactUs.html">Contact Us</a> 
+    <a href="AboutUs.html">About Us</a>
+    <a href="index.html" class="logout">Logout</a>
+    </nav>
+</header>
+
+<main class="checkout-container">
+    <h2>Checkout</h2>
+
+    <section id="cart-summary">
+    <h3>Your Cart</h3>
+    <div id="cart-items">No items in your cart yet.</div>
+    <div class="total">
+        <p>Total Amount: ₱<span id="total-amount">0.00</span></p>
+    </div>
+    </section>
+
+    <section id="shipping-info">
+    <h3>Shipping Information</h3>
+    <form id="shipping-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="address">Shipping Address</label>
+        <textarea id="address" name="address" required></textarea>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <h3>Payment Method</h3>
+        <label>
+            <input type="radio" name="payment-method" value="cod" required />
+            Cash on Delivery (COD)
+        </label><br />
+        <label>
+            <input type="radio" name="payment-method" value="card" />
+            Credit Card / Debit Card
+        </label><br />
+        <label>
+            <input type="radio" name="payment-method" value="gcash" />
+            GCash
+        </label><br />
+
+        <button type="submit" id="submit-btn">Place Order</button>
+    </form>
+    </section>
+    
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

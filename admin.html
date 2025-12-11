@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Timeless Blooms Admin</title>
+  <link rel="stylesheet" href="css/admind.css" />
+</head>
+<body>
+  <header>
+    <h1>Timeless Blooms 🌸 - Admin Dashboard</h1>
+    <nav class="nav">
+      <a href="home.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="orders.html">Orders</a>
+      <a href="customers.html">Customers</a>
+      <a href="reports.html">Reports</a>
+      <a href="settings.html">Settings</a>
+      <a href="index.html" class="logout">Logout</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-container">
+    <section class="dashboard-cards">
+      <div class="card">
+        <h2>Total Customers</h2>
+        <p>1,254</p>
+      </div>
+      <div class="card">
+        <h2>New Orders Today</h2>
+        <p>98</p>
+      </div>
+      <div class="card">
+        <h2>Available Products</h2>
+        <p>523</p>
+      </div>
+      <div class="card">
+        <h2>Monthly Revenue</h2>
+        <p>₱50,760</p>
+      </div>
+    </section>
+
+    <section class="dashboard-details">
+      <h2>Recent Orders</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#1023</td>
+            <td>Shiela</td>
+            <td>May 12, 2025</td>
+            <td><span class="status pending">Pending</span></td>
+            <td>₱1,500.00</td>
+          </tr>
+          <tr>
+            <td>#1022</td>
+            <td>Angel Lou</td>
+            <td>May 11, 2025</td>
+            <td><span class="status completed">Completed</span></td>
+            <td>₱2,550.00</td>
+          </tr>
+          <tr>
+            <td>#1021</td>
+            <td>Noriel</td>
+            <td>May 10, 2025</td>
+            <td><span class="status cancelled">Cancelled</span></td>
+            <td>₱1,750.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="product-overview">
+      <h2>Top Selling Products</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Units Sold</th>
+            <th>Stock Left</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Red Roses Bouquet</td>
+            <td>320</td>
+            <td>45</td>
+            <td>₱1,550.00</td>
+          </tr>
+          <tr>
+            <td>Spring Mix</td>
+            <td>210</td>
+            <td>68</td>
+            <td>₱30.00</td>
+          </tr>
+          <tr>
+            <td>Wedding Flowers Set</td>
+            <td>150</td>
+            <td>12</td>
+            <td>₱550.00</td>
+          </tr>
+          <tr>
+            <td>Pink Roses</td>
+            <td>180</td>
+            <td>32</td>
+            <td>₱300</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="place-order-summary">
+      <h2>Today's Checkout Summary</h2>
+      <ul>
+        <li>Total Checkouts: 75</li>
+        <li>Average Order Value: ₱300.40</li>
+        <li>Pending Payments: 8</li>
+        <li>Completed Payments: 67</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Timeless Blooms. All rights reserved.</p>
+  </footer>
+</body>
+</html>

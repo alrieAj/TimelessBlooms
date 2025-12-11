@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="css/logd.css">
+  <style>
+    /* Basic style to make the new link look good, assuming logd.css defines Login-container */
+    .signup-link {
+      display: block; /* Make it take its own line */
+      margin-top: 15px; /* Add some space above it */
+      text-align: center; /* Center the text */
+      color: white; /* Choose a color that stands out on your video background */
+      text-decoration: none; /* Remove underline */
+      font-size: 0.9em;
+    }
+    .signup-link:hover {
+      text-decoration: underline; /* Add underline on hover */
+    }
+    /* Fixing the overlapping container issue */
+    .Login-container {
+      /* Ensure this styling positions your main form correctly */
+      max-width: 400px; /* Example width */
+      padding: 20px;
+      /* other centering/styling properties */
+    }
+    /* Keeping the original video background as you had it */
+    #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+      z-index: -1; /* Send it to the back */
+    }
+    /* Add a semi-transparent overlay if needed for text readability */
+    .Login-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+        z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="bg-video" playsinline>
+    <source src="videos/lo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="Login-container">
+    <h2>WELCOME TO TIMELESS BLOSSOMS</h2>
+
+    <form id="loginForm">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <div class="checkbox">
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember">Remember me</label>
+      </div>
+
+      <button type="submit" class="signin-button">Sign In</button>
+      <button type="button" class="forgot-button">Forgot Password</button>
+
+      <a href="signup.html" class="signup-link">Don't have an account? **Sign Up**</a>
+
+      <p id="message" class="login-message"></p>
+    </form>
+  </div>
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const message = document.getElementById("message");
+      
+      let loggedIn = false;
+      let redirectPage = "";
+      let welcomeMessage = "";
+
+      // --- 1. Check Hardcoded Accounts (Shiela and Admin) ---
+      if (email === "shiela" && password === "123") {
+        loggedIn = true;
+        redirectPage = "home.html";
+        welcomeMessage = "Welcome, Customer!";
+      } else if (email === "admin" && password === "admin123") {
+        loggedIn = true;
+        redirectPage = "admin.html";
+        welcomeMessage = "Welcome, Admin!";
+      } else {
+          
+          // --- 2. Check Accounts Stored in localStorage ---
+          
+          // Get the list of users from localStorage
+          let users = JSON.parse(localStorage.getItem('users')) || [];
+
+          // Find a user that matches the entered email and password
+          const foundUser = users.find(user => 
+              user.email === email && user.password === password
+          );
+
+          if (foundUser) {
+              loggedIn = true;
+              redirectPage = "home.html"; // New users go to index.html
+              welcomeMessage = `Welcome, ${foundUser.name || 'User'}!`;
+          }
+      }
+
+      // --- Final Result Handling ---
+      if (loggedIn) {
+        message.style.color = "green";
+        message.textContent = welcomeMessage;
+        
+        // Redirect after 1 second
+        setTimeout(() => {
+          window.location.href = redirectPage;
+        }, 1000);
+      } else {
+        message.style.color = "red";
+        message.textContent = "Invalid email or password.";
+      }
+    });
+</script>
+
+</body>
+</html>
