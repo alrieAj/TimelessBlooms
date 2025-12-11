@@ -1,0 +1,112 @@
+/* ========== GLOBAL STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("farm.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; /* Stretch to fit width and height exactly */
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: #333;
+}
+  /* ========== HEADER STYLES ========== */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgb(255, 166, 233);
+  }
+  
+  .nav a {
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 0.20px;
+    padding: 12px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 20px;
+  }
+  
+  .nav a:hover {
+    background-color: #ff0cca;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+/* ========== SERVICES SECTION ========== */
+.section-label {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 24px;
+    color: #fff;
+    background-color: #038ac4;
+    padding: 10px 24px;
+    border-radius: 16px;
+    text-align: left;
+    margin: 40px 0 20px 30px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== SERVICES GRID ========== */
+.gift-bundles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 40px;
+}
+
+/* ========== CARD DESIGN ========== */
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+}

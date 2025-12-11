@@ -1,0 +1,133 @@
+/* ========== GLOBAL STYLES ========== */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-image: url('farm.jpg'); /* Replace with your actual path */
+    background-size: cover;        /* Ensures full screen coverage without repeating */
+    background-position: center;   /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents repeating */
+    background-attachment: fixed;  /* Keeps image fixed while scrolling */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  /* ========== HEADER ========== */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgb(255, 166, 233); /* Light pink */
+  }
+  
+  .nav a {
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 0.20px;
+    padding: 12px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 20px;
+  }
+  
+  .nav a:hover {
+    background-color: #ff0cca;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  /* ========== CONTACT US PAGE ========== */
+.contact-section {
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    font-size: 2.5rem;
+    color: #d63384; /* Same color as header */
+    margin-bottom: 20px;
+  }
+  
+  .contact-section form {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-section form label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .contact-section form input,
+  .contact-section form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .contact-section form input:focus,
+  .contact-section form textarea:focus {
+    border-color: #ff0cca; /* Highlight field on focus */
+  }
+  
+  .contact-section form button {
+    background-color: #d63384; /* Same color as header */
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-section form button:hover {
+    background-color: #c2186a;
+  }
+  
+  .contact-section .info {
+    margin-top: 40px;
+  }
+  
+  .contact-section .info h3 {
+    font-size: 1.8rem;
+    color: #d63384;
+    margin-bottom: 15px;
+  }
+  
+  .contact-section .info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .contact-section .map {
+    margin-top: 40px;
+  }
+  
+  .contact-section .map iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    border-radius: 10px;
+  }
+  
